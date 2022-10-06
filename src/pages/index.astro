@@ -1,26 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import PhotoCard from '../components/PhotoCard.astro';
+import photos from '../data/photos.json';
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <h1>
-      Welcome to <span class="text-gradient">my ass</span>. It is so nice to
-      meet you :)
+      A few pictures from <span class="text-gradient">New York</span>. Thanks
+      for the photos, Tilly!
     </h1>
     <div class="grid grid-cols-2 gap-4">
-      <img class="" alt="Chloé on my back" src="/images/chloe.png" />
-      <img class="" alt="Me on a stoop" src="/images/on-a-stoop.png" />
-      <img class="col-span-2" alt="Some friends" src="/images/friends.png" />
-      <img class="" alt="Milo and Me" src="/images/milo-me.png" />
-      <img class="" alt="Milo and Me" src="/images/met-me.png" />
-      <img
-        class="col-span-2"
-        alt="Waterfall close"
-        src="/images/waterfall-close.png"
-      />
-      <img class="col-span-2" alt="Some friends" src="/images/friends-2.png" />
+      {
+        photos.newYork.map(({ title, location, date, src, wide }) => (
+          <div class={`${wide === 'true' ? 'col-span-2' : ''}`}>
+            <PhotoCard title={title} location={location} date={date}>
+              <img alt={title} src={src} />
+            </PhotoCard>
+          </div>
+        ))
+      }
     </div>
   </main>
 </Layout>

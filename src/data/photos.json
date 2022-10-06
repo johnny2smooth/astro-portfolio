@@ -1,0 +1,46 @@
+{
+  "newYork": [
+    {
+      "title": "Chloé on a pig's back",
+      "src": "/images/chloe.png",
+      "date": "2022-09-18",
+      "location": "Pete's Candy Shop, NY",
+      "wide": "false"
+    },
+    {
+      "title": "JP on a stoop",
+      "src": "/images/on-a-stoop.png",
+      "date": "2022-09-15",
+      "location": "Kyle's Stoop, NY",
+      "wide": "false"
+    },
+    {
+      "title": "Friends",
+      "src": "/images/friends.png",
+      "date": "2022-09-18",
+      "location": "Pete's Candy Shop, NY",
+      "wide": "true"
+    },
+    {
+      "title": "Met and JP",
+      "src": "/images/met-me.png",
+      "date": "2022-09-16",
+      "location": "Met Museum, NY",
+      "wide": "false"
+    },
+    {
+      "title": "Milo and JP",
+      "src": "/images/milo-me.png",
+      "date": "2022-09-18",
+      "location": "Pete's Candy Shop, NY",
+      "wide": "false"
+    },
+    {
+      "title": "Friends take 2",
+      "src": "/images/friends-2.png",
+      "date": "2022-09-18",
+      "location": "Pete's Candy Shop, NY",
+      "wide": "true"
+    }
+  ]
+}
