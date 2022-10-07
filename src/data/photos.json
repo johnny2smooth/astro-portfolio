@@ -1,6 +1,13 @@
 {
   "newYork": [
     {
+      "title": "Painter + Subject",
+      "src": "/images/painter.png",
+      "date": "2022-09-22",
+      "location": "Ithaca Falls, NY",
+      "wide": "true"
+    },
+    {
       "title": "Chloé on a pig's back",
       "src": "/images/chloe.png",
       "date": "2022-09-18",
@@ -13,6 +20,13 @@
       "date": "2022-09-15",
       "location": "Kyle's Stoop, NY",
       "wide": "false"
+    },
+    {
+      "title": "Tillman",
+      "src": "/images/tillman.png",
+      "date": "2022-09-23",
+      "location": "Lucifer's Falls, NY",
+      "wide": "true"
     },
     {
       "title": "Friends",
@@ -40,6 +54,13 @@
       "src": "/images/friends-2.png",
       "date": "2022-09-18",
       "location": "Pete's Candy Shop, NY",
+      "wide": "true"
+    },
+    {
+      "title": "Waterfall",
+      "src": "/images/waterfall.png",
+      "date": "2022-09-24",
+      "location": "Treeman, NY",
       "wide": "true"
     }
   ]

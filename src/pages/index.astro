@@ -7,14 +7,18 @@ import photos from '../data/photos.json';
 
 <Layout title="Welcome to Astro.">
   <main>
-    <h1>
-      A few pictures from <span class="text-gradient">New York</span>. Thanks
-      for the photos, Tilly!
+    <h1 class="z-10">
+      A few pictures of me from <span class="text-gradient">New York</span>.
+      Thanks for the photos, Tilly!
     </h1>
-    <div class="grid grid-cols-2 gap-4">
+    <div class={`grid grid-cols-2 gap-4`}>
       {
         photos.newYork.map(({ title, location, date, src, wide }) => (
-          <div class={`${wide === 'true' ? 'col-span-2' : ''}`}>
+          <div
+            class={`${
+              wide === 'true' ? 'col-span-2' : ''
+            } grayscale transition ease-in-out delay-150 hover:-translate-y-1 hover:z-10 hover:scale-110 hover:rotate-1 hover:grayscale-0 `}
+          >
             <PhotoCard title={title} location={location} date={date}>
               <img alt={title} src={src} />
             </PhotoCard>
