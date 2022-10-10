@@ -5,7 +5,7 @@ import PhotoCard from '../components/PhotoCard.astro';
 import photos from '../data/photos.json';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Photo Gallery">
   <main>
     <h1 class="z-10">
       A few pictures of me from <span class="text-gradient">New York</span>.
@@ -17,7 +17,9 @@ import photos from '../data/photos.json';
           <div
             class={`${
               wide === 'true' ? 'col-span-2' : ''
-            } grayscale transition ease-in-out delay-150 hover:-translate-y-1 hover:z-10 hover:scale-110 hover:rotate-1 hover:grayscale-0 `}
+            } grayscale transition ease-in-out 
+						delay-100 hover:-translate-y-1 hover:z-2 hover:scale-[1.02] 
+						hover:grayscale-0 `}
           >
             <PhotoCard title={title} location={location} date={date}>
               <img alt={title} src={src} />
