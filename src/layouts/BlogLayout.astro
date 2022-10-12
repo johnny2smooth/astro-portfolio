@@ -9,11 +9,30 @@ const { frontmatter } = Astro.props;
   </head>
   <body>
     <!-- Add other UI components here, like common headers and footers. -->
-    <article class="mx-auto prose lg:prose-xl">
-      <h1>{frontmatter.title}</h1>
+    <article class="mx-auto prose lg:prose-xl p-4">
+      <div class="image-border-2 p-4">
+        <h1>{frontmatter.title}</h1>
+        <p>Written on: {frontmatter.date} by {frontmatter.author}</p>
+      </div>
       <!-- 2. Rendered HTML will be passed into the default slot. -->
-      <p>Written on: {frontmatter.date} by {frontmatter.author}</p>
       <slot />
     </article>
+    <style>
+      .image-border {
+        border: 10px solid;
+        border-image-source: linear-gradient(45deg, #9af665 0%, #85d7fd 100%);
+        border-image-slice: 1;
+      }
+      .image-border-2 {
+        border-inline-end: 10px solid;
+        border-block-end: 10px solid;
+        border-image-source: radial-gradient(
+          circle at bottom right,
+          #9af665 0%,
+          transparent 50%
+        );
+        border-image-slice: 1;
+      }
+    </style>
   </body>
 </html>
