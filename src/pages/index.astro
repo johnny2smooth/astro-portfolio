@@ -1,16 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Header from '../components/Header.jsx';
 import PhotoCard from '../components/PhotoCard.astro';
 import photos from '../data/photos.json';
 ---
 
 <Layout title="Photo Gallery">
   <main>
-    <h1 class="z-10">
-      A few pictures of me from <span class="text-gradient">New York</span>.
-      Thanks for the photos, Tilly!
-    </h1>
+    <header>
+      <h1 class="z-10">
+        A few pictures of me from <span class="text-gradient">New York</span>.
+        Thanks for the photos, Tilly!
+        <Header client:load />
+      </h1>
+    </header>
     <div class={`grid grid-cols-2 gap-4`}>
       {
         photos.newYork.map(({ title, location, date, src, wide }) => (
@@ -42,13 +45,6 @@ import photos from '../data/photos.json';
     font-weight: 800;
     margin: 0;
   }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
   .instructions {
     line-height: 1.6;
     margin: 1rem 0;
@@ -73,5 +69,12 @@ import photos from '../data/photos.json';
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 1rem;
     padding: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
   }
 </style>
