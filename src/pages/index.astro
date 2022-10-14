@@ -1,19 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.jsx';
+import FadeIn from '../components/Motion/FadeIn.jsx';
 import PhotoCard from '../components/PhotoCard.astro';
 import photos from '../data/photos.json';
 ---
 
 <Layout title="Photo Gallery">
   <main>
-    <header>
-      <h1 class="z-10">
-        A few pictures of me from <span class="text-gradient">New York</span>.
-        Thanks for the photos, Tilly!
-        <Header client:load />
-      </h1>
-    </header>
+    <FadeIn client:load>
+      <header>
+        <h1 class="z-10">
+          A few pictures of me from <span class="text-gradient">New York</span>.
+          Thanks for the photos, Tilly!
+        </h1>
+      </header>
+    </FadeIn>
     <div class={`grid grid-cols-2 gap-4`}>
       {
         photos.newYork.map(({ title, location, date, src, wide }) => (
